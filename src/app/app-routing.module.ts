@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { CreateUomComponent } from './create-uom/create-uom.component';
 
 
+
 const routes: Routes = [
   //uom
   {path: 'uom-list', component: UomListComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes),
+    ],
+  exports: [RouterModule,
+    ]
 })
 export class AppRoutingModule { }

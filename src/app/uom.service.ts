@@ -10,21 +10,21 @@ export class UomService {
 
   private baseUrl = 'https://ir-grocery.herokuapp.com/grocery/uom'
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getUomList(): Observable<any>{
-   return this.http.get(this.baseUrl+'/get');
-  };
-
-  deleteUom(id : string):Observable<any>{
-    return this.http.delete(this.baseUrl+"/delete/" + id);
+  getUomList(): Observable<any> {
+    return this.http.get(this.baseUrl + '/get');
   }
 
-  addUom(uom : Uom){
-    return this.http.post(this.baseUrl+"/add",uom, {
+  deleteUom(id: string): Observable<any> {
+    return this.http.delete(this.baseUrl + '/delete/' + id);
+  }
+
+  addUom(uom: Uom) {
+    return this.http.post(this.baseUrl + '/add', uom, {
       headers: new HttpHeaders({
-           'Content-Type':  'application/json',
-         })
-    }).subscribe();
+        'Content-Type': 'application/json',
+      })
+    });
   }
 }
